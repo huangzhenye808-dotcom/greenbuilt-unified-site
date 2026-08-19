@@ -35,6 +35,9 @@ function AppRoutes() {
   if (location.pathname === "/micp-3d-lab") {
     return <Micp3DLab />;
   }
+  if (location.pathname === "/micp-sim-old") {
+    return <Micp3DLab version="legacy" />;
+  }
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-950 text-slate-100 font-sans selection:bg-emerald-500 selection:text-slate-950 relative overflow-x-hidden">

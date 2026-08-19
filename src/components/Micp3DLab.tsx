@@ -4,10 +4,16 @@ import { Link } from "react-router-dom";
 import { MicpSimulator3D } from "./MicpSimulator3D";
 import "./MicpSimulator3D.css";
 
-export default function Micp3DLab() {
+type Micp3DLabProps = {
+  version?: "new" | "legacy";
+};
+
+export default function Micp3DLab({ version = "new" }: Micp3DLabProps) {
   useEffect(() => {
     const previousTitle = document.title;
-    document.title = "GreenBuilt｜MICP 3D 自癒實驗室";
+    document.title = version === "legacy"
+      ? "GreenBuilt｜MICP 3D 自癒實驗室（舊版）"
+      : "GreenBuilt｜MICP 3D 自癒實驗室";
     window.scrollTo(0, 0);
     return () => {
       document.title = previousTitle;
@@ -26,7 +32,7 @@ export default function Micp3DLab() {
           <span>GREENBUILT MICP 3D LAB</span>
         </div>
       </header>
-      <MicpSimulator3D />
+      <MicpSimulator3D version={version} />
     </div>
   );
 }
