@@ -185,6 +185,50 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 1.75. Integrated 3D MICP Lab Entry */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-3xl border border-cyan-400/20 bg-gradient-to-br from-[#101a18] via-[#0d1513] to-[#0b0d0c] p-6 sm:p-8 lg:p-10 shadow-2xl">
+          <div className="pointer-events-none absolute -left-24 -top-24 h-64 w-64 rounded-full bg-cyan-500/10 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-24 right-1/4 h-52 w-52 rounded-full bg-emerald-500/10 blur-3xl" />
+          <div className="relative z-10 grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
+            <div className="lg:col-span-7 space-y-4">
+              <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1.5 text-[10px] font-mono font-semibold tracking-[0.18em] text-cyan-300">
+                <span className="h-2 w-2 animate-pulse rounded-full bg-cyan-300" />
+                NEW / 3D RESEARCH LAB
+              </div>
+              <h2 className="text-3xl font-display font-extrabold tracking-tight text-[#e0e7e0] sm:text-4xl">
+                MICP 3D 自癒實驗室
+              </h2>
+              <p className="max-w-2xl text-sm leading-relaxed text-[#e0e7e0]/70">
+                以 Three.js 將水分傳輸、包埋菌體、活化孢子與 CaCO₃ 晶簇放進同一個可旋轉的微裂縫模型，調整場域、裂縫寬度、含水率與溫度，觀察自癒趨勢如何逐日變化。
+              </p>
+              <Link
+                to="/micp-3d-lab"
+                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-400 to-emerald-400 px-5 py-3 text-xs font-bold tracking-wider text-[#07100b] shadow-lg transition hover:from-cyan-300 hover:to-emerald-300"
+              >
+                開啟 MICP 3D 實驗室
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+            <div className="lg:col-span-5">
+              <Link to="/micp-3d-lab" className="group block rounded-2xl border border-cyan-400/15 bg-[#080c0b]/80 p-4 transition hover:border-cyan-300/40 hover:bg-[#0b1513]">
+                <div className="mb-4 flex items-center justify-between text-[10px] font-mono tracking-widest text-cyan-300/80">
+                  <span>MICRO-CRACK / 600X</span>
+                  <span className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-cyan-300 animate-pulse" />INTERACTIVE</span>
+                </div>
+                <div className="relative h-36 overflow-hidden rounded-xl border border-white/10 bg-[radial-gradient(circle_at_28%_45%,rgba(86,211,131,0.5),transparent_3%),linear-gradient(135deg,#17231e,#090b09)]">
+                  <div className="absolute left-[10%] top-1/2 h-[2px] w-[80%] -rotate-12 bg-gradient-to-r from-emerald-400/20 via-cyan-200 to-emerald-400/20 shadow-[0_0_18px_rgba(103,232,249,0.65)]" />
+                  <div className="absolute left-[28%] top-[34%] h-2 w-2 rounded-full bg-emerald-300 shadow-[0_0_12px_rgba(52,211,153,0.9)] animate-pulse" />
+                  <div className="absolute left-[60%] top-[58%] h-2 w-2 rounded-full bg-cyan-200 shadow-[0_0_12px_rgba(103,232,249,0.9)] animate-pulse [animation-delay:400ms]" />
+                  <div className="absolute right-3 top-3 rounded-md border border-white/10 bg-black/60 px-2 py-1 text-[9px] font-mono text-neutral-300">CaCO₃ / WATER / SPORES</div>
+                  <div className="absolute bottom-3 left-3 rounded-md border border-white/10 bg-black/60 px-2 py-1 text-[9px] font-mono text-neutral-300">旋轉模型・調整參數・開始癒合</div>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 2. Core Value Metrics */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center space-y-3">

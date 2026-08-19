@@ -9,6 +9,7 @@ import About from "./components/About";
 import Downloads from "./components/Downloads";
 import Lab from "./components/InteractiveLab";
 import MicpSimulator from "./components/MicpSimulator";
+import Micp3DLab from "./components/Micp3DLab";
 import Contact from "./components/Contact";
 import Copilot from "./components/Copilot";
 import Footer from "./components/Footer";
@@ -30,6 +31,9 @@ function AppRoutes() {
   }
   if (location.pathname === "/micp-sim") {
     return <MicpSimulator />;
+  }
+  if (location.pathname === "/micp-3d-lab") {
+    return <Micp3DLab />;
   }
 
   return (

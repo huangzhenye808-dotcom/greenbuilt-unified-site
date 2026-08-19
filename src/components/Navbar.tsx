@@ -23,6 +23,7 @@ export default function Navbar() {
     { name: "工程實績", path: "/projects" },
     { name: "自癒互動實驗室", path: "/lab" },
     { name: "MICP 生化自癒模擬器", path: "/micp-sim" },
+    { name: "MICP 3D 實驗室", path: "/micp-3d-lab" },
     { name: "常見問題", path: "/faq" },
     { name: "關於綠築", path: "/about" },
     { name: "自動擷取工具", path: "/downloads" },

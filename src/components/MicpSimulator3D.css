@@ -1,0 +1,594 @@
+/* Scoped from greenbuilt-micp-3d-lab/app/globals.css */
+
+
+.micp3d-page *{
+  box-sizing: border-box;
+}
+
+.micp3d-page{
+  background: var(--background);
+}
+
+.micp3d-page{
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.micp3d-page button,
+.micp3d-page input{
+  font: inherit;
+}
+
+.micp3d-page button{
+  color: inherit;
+}
+
+.micp3d-page .micp-app{
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(23, 27, 23, 0.96), rgba(11, 13, 12, 1) 46%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.03) 0,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 48px
+    );
+  color: var(--foreground);
+  padding: 24px;
+}
+
+.micp3d-page .hero-panel{
+  align-items: end;
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  margin: 0 auto;
+  max-width: 1480px;
+  padding: 24px 0 28px;
+}
+
+.micp3d-page .hero-copy{
+  max-width: 840px;
+}
+
+.micp3d-page .kicker,
+.micp3d-page .scene-toolbar,
+.micp3d-page .scene-readout span,
+.micp3d-page .status-strip span,
+.micp3d-page .scenario-summary span,
+.micp3d-page .process-band span,
+.micp3d-page .section-heading span,
+.micp3d-page .evidence-card span,
+.micp3d-page .calibration-panel > span{
+  color: var(--muted);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+.micp3d-page .kicker{
+  color: var(--green);
+  margin-bottom: 16px;
+}
+
+.micp3d-page h1,
+.micp3d-page h2,
+.micp3d-page p{
+  margin: 0;
+}
+
+.micp3d-page h1{
+  font-size: clamp(38px, 7vw, 88px);
+  font-weight: 800;
+  line-height: 0.96;
+  max-width: 980px;
+}
+
+.micp3d-page .hero-copy p{
+  color: var(--soft);
+  font-size: 16px;
+  line-height: 1.78;
+  margin-top: 20px;
+  max-width: 760px;
+}
+
+.micp3d-page .version-switch{
+  background: #0f1210;
+  border: 1px solid #252b25;
+  border-radius: 8px;
+  display: inline-grid;
+  gap: 4px;
+  grid-template-columns: repeat(2, 86px);
+  margin-top: 22px;
+  padding: 4px;
+}
+
+.micp3d-page .version-switch a{
+  border-radius: 6px;
+  color: var(--muted);
+  display: grid;
+  font-size: 14px;
+  font-weight: 700;
+  min-height: 38px;
+  place-items: center;
+  text-decoration: none;
+}
+
+.micp3d-page .version-switch a.active{
+  background: var(--panel-strong);
+  color: var(--green);
+}
+
+.micp3d-page .status-strip{
+  border: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  min-height: 118px;
+}
+
+.micp3d-page .status-strip div{
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+}
+
+.micp3d-page .status-strip div + div{
+  border-left: 1px solid var(--line);
+}
+
+.micp3d-page .status-strip strong{
+  color: var(--foreground);
+  font-size: clamp(24px, 4vw, 40px);
+  line-height: 1;
+}
+
+.micp3d-page .simulator-grid{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: minmax(320px, 420px) minmax(0, 1fr);
+  margin: 22px auto 0;
+  max-width: 1480px;
+}
+
+.micp3d-page .control-panel,
+.micp3d-page .scene-panel,
+.micp3d-page .process-band article,
+.micp3d-page .evidence-card,
+.micp3d-page .calibration-panel{
+  background: rgba(21, 24, 21, 0.92);
+  border: 1px solid var(--line);
+}
+
+.micp3d-page .control-panel{
+  border-radius: 8px;
+  display: grid;
+  gap: 20px;
+  padding: 18px;
+}
+
+.micp3d-page .scenario-tabs{
+  background: #0f1210;
+  border: 1px solid #252b25;
+  border-radius: 8px;
+  display: grid;
+  gap: 4px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 4px;
+}
+
+.micp3d-page .scenario-tabs button,
+.micp3d-page .primary-action,
+.micp3d-page .ghost-action{
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  min-height: 42px;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.micp3d-page .scenario-tabs button{
+  background: transparent;
+  color: var(--muted);
+  font-size: 13px;
+  padding: 10px 8px;
+}
+
+.micp3d-page .scenario-tabs button.active{
+  background: var(--panel-strong);
+  color: var(--green);
+}
+
+.micp3d-page .scenario-summary{
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 18px;
+}
+
+.micp3d-page .scenario-summary h2{
+  font-size: 22px;
+  margin-top: 8px;
+}
+
+.micp3d-page .scenario-summary p{
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.68;
+  margin-top: 10px;
+}
+
+.micp3d-page .slider-stack{
+  display: grid;
+  gap: 18px;
+}
+
+.micp3d-page .slider-stack label{
+  display: grid;
+  gap: 10px;
+}
+
+.micp3d-page .slider-stack span{
+  color: var(--muted);
+  display: flex;
+  font-size: 13px;
+  justify-content: space-between;
+}
+
+.micp3d-page .slider-stack b{
+  color: var(--foreground);
+  font-weight: 700;
+}
+
+.micp3d-page input[type="range"]{
+  accent-color: var(--green);
+  cursor: pointer;
+  width: 100%;
+}
+
+.micp3d-page .toggle-row{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.micp3d-page .toggle-row label{
+  align-items: center;
+  background: #101311;
+  border: 1px solid #252b25;
+  border-radius: 6px;
+  color: var(--soft);
+  display: flex;
+  font-size: 13px;
+  gap: 8px;
+  min-height: 42px;
+  padding: 10px;
+}
+
+.micp3d-page .toggle-row input{
+  accent-color: var(--cyan);
+}
+
+.micp3d-page .action-row{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 92px;
+}
+
+.micp3d-page .primary-action{
+  background: var(--green);
+  color: #07100b;
+  font-weight: 800;
+}
+
+.micp3d-page .ghost-action{
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--soft);
+}
+
+.micp3d-page .primary-action:hover,
+.micp3d-page .ghost-action:hover,
+.micp3d-page .scenario-tabs button:hover{
+  transform: translateY(-1px);
+}
+
+.micp3d-page .warning{
+  background: rgba(223, 138, 84, 0.12);
+  border: 1px solid rgba(223, 138, 84, 0.42);
+  border-radius: 8px;
+  color: #ffd0b2;
+  font-size: 13px;
+  line-height: 1.55;
+  padding: 12px;
+}
+
+.micp3d-page .scene-panel{
+  border-radius: 8px;
+  display: grid;
+  grid-template-rows: auto minmax(440px, 1fr) auto;
+  min-height: 680px;
+  overflow: hidden;
+  position: relative;
+}
+
+.micp3d-page .scene-toolbar{
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: space-between;
+  padding: 12px 16px;
+}
+
+.micp3d-page .scene-canvas{
+  cursor: grab;
+  display: block;
+  height: 100%;
+  min-height: 440px;
+  outline: none;
+  touch-action: none;
+  width: 100%;
+}
+
+.micp3d-page .scene-canvas:active{
+  cursor: grabbing;
+}
+
+.micp3d-page .scene-readout{
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.micp3d-page .scene-readout div{
+  display: grid;
+  gap: 7px;
+  padding: 14px 16px;
+}
+
+.micp3d-page .scene-readout div + div{
+  border-left: 1px solid var(--line);
+}
+
+.micp3d-page .scene-readout strong{
+  color: var(--foreground);
+  font-size: 18px;
+}
+
+.micp3d-page .process-band{
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 20px auto 0;
+  max-width: 1480px;
+}
+
+.micp3d-page .process-band article{
+  border-radius: 8px;
+  min-height: 136px;
+  padding: 16px;
+}
+
+.micp3d-page .process-band article.active{
+  border-color: rgba(86, 211, 131, 0.58);
+}
+
+.micp3d-page .process-band article.active span{
+  color: var(--green);
+}
+
+.micp3d-page .process-band p{
+  color: var(--soft);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 14px;
+}
+
+.micp3d-page .evidence-band,
+.micp3d-page .calibration-grid{
+  margin: 20px auto 0;
+  max-width: 1480px;
+}
+
+.micp3d-page .evidence-band{
+  border-top: 1px solid var(--line);
+  padding-top: 22px;
+}
+
+.micp3d-page .section-heading{
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.micp3d-page .section-heading h2,
+.micp3d-page .calibration-panel h2{
+  font-size: clamp(22px, 3vw, 34px);
+  line-height: 1.12;
+}
+
+.micp3d-page .evidence-grid{
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.micp3d-page .evidence-card,
+.micp3d-page .calibration-panel{
+  border-radius: 8px;
+  min-height: 188px;
+  padding: 18px;
+}
+
+.micp3d-page .evidence-card{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.micp3d-page .evidence-card h3{
+  font-size: 20px;
+  margin: 0;
+}
+
+.micp3d-page .evidence-card p,
+.micp3d-page .calibration-panel p,
+.micp3d-page .comparison-list p{
+  color: var(--soft);
+  font-size: 14px;
+  line-height: 1.68;
+  margin: 0;
+}
+
+.micp3d-page .evidence-card a{
+  align-self: flex-start;
+  color: var(--cyan);
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: auto;
+  text-decoration: none;
+}
+
+.micp3d-page .evidence-card a:hover{
+  color: var(--green);
+}
+
+.micp3d-page .calibration-grid{
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(320px, 0.8fr) minmax(0, 1.2fr);
+}
+
+.micp3d-page .calibration-panel{
+  display: grid;
+  gap: 14px;
+}
+
+.micp3d-page .equation-stack{
+  display: grid;
+  gap: 8px;
+}
+
+.micp3d-page .equation-stack code{
+  background: #0e1110;
+  border: 1px solid #27312a;
+  border-radius: 6px;
+  color: #f4ecd1;
+  display: block;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: clamp(12px, 2vw, 15px);
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  padding: 10px;
+}
+
+.micp3d-page .comparison-list{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.micp3d-page .comparison-list div{
+  background: #101311;
+  border: 1px solid #252b25;
+  border-radius: 6px;
+  display: grid;
+  gap: 8px;
+  min-height: 172px;
+  padding: 12px;
+}
+
+.micp3d-page .comparison-list strong{
+  color: var(--green);
+  font-size: 15px;
+}
+
+@media (max-width: 1100px){
+
+  .micp3d-page .hero-panel,
+.micp3d-page .simulator-grid,
+.micp3d-page .calibration-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .micp3d-page .scene-panel{
+    min-height: 620px;
+  }
+
+  .micp3d-page .evidence-grid{
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 760px){
+
+  .micp3d-page .micp-app{
+    padding: 14px;
+  }
+
+  .micp3d-page .hero-panel{
+    gap: 18px;
+    padding-top: 12px;
+  }
+
+  .micp3d-page .hero-copy p{
+    font-size: 14px;
+  }
+
+  .micp3d-page .status-strip,
+.micp3d-page .scene-readout{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .micp3d-page .process-band{
+    grid-template-columns: 1fr;
+  }
+
+  .micp3d-page .comparison-list{
+    grid-template-columns: 1fr;
+  }
+
+  .micp3d-page .status-strip div:nth-child(odd),
+.micp3d-page .scene-readout div:nth-child(odd){
+    border-left: 0;
+  }
+
+  .micp3d-page .status-strip div:nth-child(n + 3){
+    border-top: 1px solid var(--line);
+  }
+
+  .micp3d-page .scene-readout div:nth-child(3){
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    grid-column: 1 / -1;
+  }
+
+  .micp3d-page .simulator-grid{
+    gap: 14px;
+  }
+
+  .micp3d-page .scenario-tabs,
+.micp3d-page .toggle-row,
+.micp3d-page .action-row{
+    grid-template-columns: 1fr;
+  }
+
+  .micp3d-page .scene-panel{
+    grid-template-rows: auto minmax(340px, 1fr) auto;
+    min-height: 520px;
+  }
+
+  .micp3d-page .scene-canvas{
+    min-height: 340px;
+  }
+
+}
+
