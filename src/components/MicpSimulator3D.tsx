@@ -950,7 +950,7 @@ export function MicpSimulator3D({ version = "new" }: { version?: VersionMode }) 
               : "保留前一版 3D 微裂縫展示邏輯，聚焦連續裂縫、分岔、水分示蹤與 CaCO3 晶體沿裂縫壁生長，不加入來源校對面板。"}
           </p>
           <nav className="version-switch" aria-label="版本切換">
-            <a className={isNewVersion ? "active" : ""} href="/micp-sim">
+            <a className={isNewVersion ? "active" : ""} href="/micp-3d-lab">
               新版
             </a>
             <a className={!isNewVersion ? "active" : ""} href="/micp-sim-old">
